@@ -38,8 +38,12 @@ html, body{
     left: 50%;top: 50%;
 }
 
-#navigation{
+#navigation {
     background: #F3F3F2;
+}
+
+#navigation .container {
+    padding-top: 13px;
 }
 
 #navigation .nav-pills li a
