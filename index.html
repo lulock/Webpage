@@ -11,15 +11,25 @@
 
 </head>
 <body>
-	<nav class = "nav span9" style = "display:none">
-		<div class="container text-center">
-			<ul class = "navlinks">
-				<li><a href="./home.html">Home</a></li>
+	<nav id="navigation" class="navbar navbar-default" style = "display:none">
+		<div>
+			<ul class = "nav nav-pills">
+				<li>
+					<a class = "navbar-brand" href="./home.html">Home
+					<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+				</a></li>
 				<li><a href="./about.html">About</a></li>
 				<li><a href="./contact.html">Contact</a></li>
 				<li><a href="./photography.html">Photography</a></li>
-				<li><a href="./projects.html">Projects</a></li>
-			</ul>	
+				<li role="presentation" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" href="./projects.html">
+						Projects <span class="caret"></span>
+					</a>
+					<ul class = "dropdown-menu">
+						<li><a href="">Space Escape</a></li>
+					</ul>
+				</li>			
+			</ul>
 		</div>
 	</nav>
 	<div id = "outer">
