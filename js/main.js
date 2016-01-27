@@ -11,5 +11,5 @@ $('.toggle').click(function (event) {
 	$('.profile').animate({
 		right: '100px'}, options).animate({
 		opacity: 0.25,
-		left:'150%'}, options);
+		left:'150%'}, options).attr('disabled', true);
 });
