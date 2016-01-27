@@ -40,10 +40,11 @@ html, body{
 
 #navigation {
     background: #F3F3F2;
+    margin: 0 0 0 0;
 }
 
 #navigation .container {
-    padding-top: 13px;
+    padding-top: 10px;
 }
 
 #navigation .nav-pills li a
