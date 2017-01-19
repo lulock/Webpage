@@ -208,7 +208,6 @@ h5 {
     margin-bottom: 30px;
     padding-bottom:10px;
     border: 1px solid #383737;
-    background-image:url('../img/sep-half.png');
     background-color: rgba(88, 24, 69, 0.3);
     color:white;
     height:500px;
@@ -305,8 +304,8 @@ h5 {
 .text p {
     font-family: 'Open Sans', sans-serif;
     margin-left:8px;
-    font-size:14px;
-    line-height:18px;
+    font-size:10px;
+    line-height:15px;
 }
 
 .text grey {
@@ -329,7 +328,7 @@ h5 {
 }
 
 .navbar-nav  {
-    background-color:rgba(140, 139, 141,0.2);
+    background-color:rgba(140, 139, 141,0.05);
 }
 
 /***********LineIcons Styles***********/
@@ -413,8 +412,6 @@ a:hover {
 #footerwrap {
     width: 100%;
     background: rgba(7,7,12,0.5);
-
-    background-image:url('../img/sep-half.png');
     padding-top:25px;
     padding-bottom: 20px;
     border-top-style: solid;
