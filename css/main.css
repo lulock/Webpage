@@ -409,6 +409,11 @@ a:hover {
     text-decoration: none;
 }
 
+a:visited { 
+    color: #dff948;
+    text-decoration: none;
+}
+
 .prof:hover{
 background-image:url("http://placehold.it/350x150/ccc/fff");
 }

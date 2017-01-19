@@ -33,8 +33,6 @@
             height: 80%;
         }
     </style>
-
-
     </head>
     <body>
 
@@ -72,7 +70,9 @@
                         <h1>Leila Methnani</h1>
                         <h3>Earth, The Milky Way</h3>
                         <div class="info-user">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            
+                            <a href="mailto:leilamethnani@gmail.com" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
+                            <a href="https://www.github.com/lulock" target="_blank"><i aria-hidden="true" class="fa fa-github-alt align-middle"></i></a>
                         </div>
                     </div>
                 </div>
@@ -87,290 +87,320 @@
                             <i class="fa fa-globe" aria-hidden="true"></i>
                         </div>
                         <hr>
-                        <div id="map"></div>
-                        <script>
-                            var map;
-                            function initMap() {
+                        <div id="map">
+                            <script>
+                                var map;
+                                function initMap() {
 
-                                var home = {lat: 32.890576, lng: 13.189881};
-                                var born = {lat: 59.60, lng: 16.544059};
-                                var bachelors = {lat: 49.260430, lng: -123.245683};
-                                var highschool = {lat: 25.020598, lng: 55.203341};
-                                var summer = {lat: 48.235654, lng: 16.416671};
-                                map = new google.maps.Map(document.getElementById('map'), {
-                                    center: {lat: 50, lng: -34},
-                                    zoom: 2,
-                                    zoomControl: false,
-                                    scrollwheel: false,
-                                    disableDoubleClickZoom: true,
-                                    streetViewControl: false,
-                                    mapTypeControl: false,
-                                    styles: [
-                                        {
-                                            "elementType": "geometry",
-                                            "stylers": [
-                                                {
-                                                    "color": "#1b281e"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "elementType": "labels.text.fill",
-                                            "stylers": [
-                                                {
-                                                    "color": "#f9fbff"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "elementType": "labels.text.stroke",
-                                            "stylers": [
-                                                {
-                                                    "color": "#081116"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "administrative.country",
-                                            "elementType": "geometry.stroke",
-                                            "stylers": [
-                                                {
-                                                    "color": "#6f5166"
-                                                },
-                                                {
-                                                    "weight": 1
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "administrative.province",
-                                            "elementType": "geometry.stroke",
-                                            "stylers": [
-                                                {
-                                                    "color": "#4b6878"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "landscape.man_made",
-                                            "elementType": "geometry.stroke",
-                                            "stylers": [
-                                                {
-                                                    "color": "#334e87"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "landscape.natural",
-                                            "elementType": "geometry",
-                                            "stylers": [
-                                                {
-                                                    "color": "#3c1a34"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "poi",
-                                            "elementType": "geometry",
-                                            "stylers": [
-                                                {
-                                                    "color": "#283d6a"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "poi",
-                                            "elementType": "labels.text.fill",
-                                            "stylers": [
-                                                {
-                                                    "color": "#6f9ba5"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "poi",
-                                            "elementType": "labels.text.stroke",
-                                            "stylers": [
-                                                {
-                                                    "color": "#1d2c4d"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "poi.park",
-                                            "elementType": "geometry.fill",
-                                            "stylers": [
-                                                {
-                                                    "color": "#023e58"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "poi.park",
-                                            "elementType": "labels.text.fill",
-                                            "stylers": [
-                                                {
-                                                    "color": "#3C7680"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "road",
-                                            "stylers": [
-                                                {
-                                                    "visibility": "off"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "road",
-                                            "elementType": "geometry",
-                                            "stylers": [
-                                                {
-                                                    "color": "#304a7d"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "road",
-                                            "elementType": "labels.text.fill",
-                                            "stylers": [
-                                                {
-                                                    "color": "#98a5be"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "road",
-                                            "elementType": "labels.text.stroke",
-                                            "stylers": [
-                                                {
-                                                    "color": "#1d2c4d"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "road.highway",
-                                            "elementType": "geometry",
-                                            "stylers": [
-                                                {
-                                                    "color": "#2c6675"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "road.highway",
-                                            "elementType": "geometry.stroke",
-                                            "stylers": [
-                                                {
-                                                    "color": "#255763"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "road.highway",
-                                            "elementType": "labels.text.fill",
-                                            "stylers": [
-                                                {
-                                                    "color": "#b0d5ce"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "road.highway",
-                                            "elementType": "labels.text.stroke",
-                                            "stylers": [
-                                                {
-                                                    "color": "#023e58"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "transit",
-                                            "elementType": "labels.text.fill",
-                                            "stylers": [
-                                                {
-                                                    "color": "#98a5be"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "transit",
-                                            "elementType": "labels.text.stroke",
-                                            "stylers": [
-                                                {
-                                                    "color": "#1d2c4d"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "transit.line",
-                                            "elementType": "geometry.fill",
-                                            "stylers": [
-                                                {
-                                                    "color": "#283d6a"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "transit.station",
-                                            "elementType": "geometry",
-                                            "stylers": [
-                                                {
-                                                    "color": "#3a4762"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "water",
-                                            "elementType": "geometry",
-                                            "stylers": [
-                                                {
-                                                    "color": "#060208"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "featureType": "water",
-                                            "elementType": "labels.text.fill",
-                                            "stylers": [
-                                                {
-                                                    "color": "#917c90"
-                                                }
-                                            ]
-                                        }
-                                    ]
+                                    var home = {lat: 32.890576, lng: 13.189881};
+                                    var born = {lat: 59.60, lng: 16.544059};
+                                    var bachelors = {lat: 49.260430, lng: -123.245683};
+                                    var highschool = {lat: 25.020598, lng: 55.203341};
+                                    var summer = {lat: 48.235654, lng: 16.416671};
+                                    map = new google.maps.Map(document.getElementById('map'), {
+                                        center: {lat: 50, lng: -34},
+                                        zoom: 2,
+                                        zoomControl: false,
+                                        scrollwheel: false,
+                                        disableDoubleClickZoom: true,
+                                        streetViewControl: false,
+                                        mapTypeControl: false,
+                                        styles: [
+                                            {
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#1b281e"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "elementType": "labels.text.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#f9fbff"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "elementType": "labels.text.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#081116"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "administrative.country",
+                                                "elementType": "geometry.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#6f5166"
+                                                    },
+                                                    {
+                                                        "weight": 1
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "administrative.province",
+                                                "elementType": "geometry.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#4b6878"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "landscape.man_made",
+                                                "elementType": "geometry.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#334e87"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "landscape.natural",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#3c1a34"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#283d6a"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi",
+                                                "elementType": "labels.text.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#6f9ba5"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi",
+                                                "elementType": "labels.text.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#1d2c4d"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi.park",
+                                                "elementType": "geometry.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#023e58"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi.park",
+                                                "elementType": "labels.text.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#3C7680"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "off"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#304a7d"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road",
+                                                "elementType": "labels.text.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#98a5be"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road",
+                                                "elementType": "labels.text.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#1d2c4d"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#2c6675"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "geometry.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#255763"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "labels.text.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#b0d5ce"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "labels.text.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#023e58"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "transit",
+                                                "elementType": "labels.text.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#98a5be"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "transit",
+                                                "elementType": "labels.text.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#1d2c4d"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "transit.line",
+                                                "elementType": "geometry.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#283d6a"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "transit.station",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#3a4762"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "water",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#060208"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "water",
+                                                "elementType": "labels.text.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#917c90"
+                                                    }
+                                                ]
+                                            }
+                                        ]
 
-                                });
-                                var marker1 = new google.maps.Marker({
-                                    position: home,
-                                    map: map
-                                });
-                                var marker2 = new google.maps.Marker({
-                                    position: born,
-                                    map: map
-                                });
-                                var marker3 = new google.maps.Marker({
-                                    position: bachelors,
-                                    map: map
-                                });
-                                var marker4 = new google.maps.Marker({
-                                    position: highschool,
-                                    map: map
-                                });
-                                var marker5 = new google.maps.Marker({
-                                    position: summer,
-                                    map: map
-                                });
+                                    });
+                                    var image = {url: './img/arrow.png'};
+                                    var contentString1 = '<div id="content">'+
+                                        '<div id="siteNotice">'+
+                                        '</div>'+
+                                        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+                                        '<div id="bodyContent">'+
+                                        '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+                                        'sandstone rock formation in the southern part of the '+
+                                        'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+                                        'south west of the nearest large town, Alice Springs; 450&#160;km '+
+                                        '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+                                        'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+                                        'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+                                        'Aboriginal people of the area. It has many springs, waterholes, '+
+                                        'rock caves and ancient paintings. Uluru is listed as a World '+
+                                        'Heritage Site.</p>'+
+                                        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+                                        'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+                                        '(last visited June 22, 2009).</p>'+
+                                        '</div>'+
+                                        '</div>';
 
-                            }
-                        </script>
-                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8FB_zWzEsDltuKpH4i5LWGleZDk_wQrE&callback=initMap"
-                                async defer></script>
+                                    var infowindow1 = new google.maps.InfoWindow({
+                                        content: contentString1
+                                    });
+
+                                    var marker1 = new google.maps.Marker({
+                                        position: home,
+                                        map: map
+                                    });
+                                    var marker2 = new google.maps.Marker({
+                                        position: born,
+                                        map: map
+                                    });
+                                    var marker3 = new google.maps.Marker({
+                                        position: bachelors,
+                                        map: map
+                                    });
+                                    var marker4 = new google.maps.Marker({
+                                        position: highschool,
+                                        map: map
+                                    });
+                                    var marker5 = new google.maps.Marker({
+                                        position: summer,
+                                        map: map
+                                    });
+                                    marker1.addListener('click', function() {
+                                        infowindow1.open(map, marker1);
+                                    });
+
+                                }
+                            </script>
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8FB_zWzEsDltuKpH4i5LWGleZDk_wQrE&callback=initMap"
+                                    async defer></script>
+                        </div>
                     </div>
                 </div>
 
-                <!-- GITHUB BLOCK -->
+                <!-- INSTA BLOCK -->
                 <div class="col-sm-3 col-lg-3">
 
                     <div class="dash-unit">
@@ -379,7 +409,7 @@
                         </div>
                         <hr>
                         <div class="text">
-                            <p>A selection of my favourite shots on Instagram!.</p>
+                            <p>Check out my collection on <a href="http://www.instagram.com/lulockscollection" target="_blank"><b>Instagram</b></a>!</p>
                         </div>
                         <section class="slider insta">
                             <div class="flexslider">
@@ -437,10 +467,11 @@
                 <!-- INSTA BLOCK -->
                 <div class="col-sm-4 col-lg-4">
                     <div class="dash-unit-long">
-                        <dtitle id="bloc1">GitHub</dtitle><div id="bloc2" class="title-icon">
-                        <i aria-hidden="true" class="fa fa-github-alt align-middle"></i>
+                        <dtitle id="bloc1">Spotify Tunes</dtitle><div id="bloc2" class="title-icon">
+                        <i aria-hidden="true" class="fa fa-spotify align-middle"></i>
                         </div> 
                         <hr>  
+                        <div class="container"><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aleilamethnani%3Aplaylist%3A02mIw410itv42S3cKkxM0A" width="330" height="440" frameborder="0" allowtransparency="true"></iframe></div>
                     </div>
                 </div>
             </div><!-- /row -->
