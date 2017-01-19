@@ -41,7 +41,10 @@ h5 {
 {
     display:inline;
 }
-
+#map
+{
+    margin: 0 0 20px;
+}
 /*--- Dash Unit---*/
 .dash-unit {
     margin-bottom: 30px;
@@ -406,6 +409,9 @@ a:hover {
     text-decoration: none;
 }
 
+.prof:hover{
+background-image:url("http://placehold.it/350x150/ccc/fff");
+}
 
 
 /**********FooterWrap Section**********/   

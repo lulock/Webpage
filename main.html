@@ -26,7 +26,13 @@
     <!-- Google Fonts call. Font Used Open Sans & Raleway -->
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 80%;
+        }
+    </style>
 
 
     </head>
@@ -42,7 +48,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-star-empty"></span> Re-enter</a>
+                    <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-star-empty"></span> Lulock's World</a>
                 </div> 
                 <div class="navbar-collapse collapse">
 
@@ -72,20 +78,301 @@
                 </div>
 
                 <!-- MAP BLOCK -->
-                <div class="col-sm-3 col-lg-3">
+                <div class="col-sm-6 col-lg-6">
                     <div class="dash-unit">
                         <dtitle id="bloc1">World Map</dtitle>
 
                         <div id="bloc2" class="title-icon">
                             <!-- <span aria-hidden="true" class="li_world fs2"></span> -->
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <i class="fa fa-globe" aria-hidden="true"></i>
                         </div>
                         <hr>
+                        <div id="map"></div>
+                        <script>
+                            var map;
+                            function initMap() {
+
+                                var home = {lat: 32.890576, lng: 13.189881};
+                                var born = {lat: 59.60, lng: 16.544059};
+                                var bachelors = {lat: 49.260430, lng: -123.245683};
+                                var highschool = {lat: 25.020598, lng: 55.203341};
+                                var summer = {lat: 48.235654, lng: 16.416671};
+                                map = new google.maps.Map(document.getElementById('map'), {
+                                    center: {lat: 50, lng: -34},
+                                    zoom: 2,
+                                    zoomControl: false,
+                                    scrollwheel: false,
+                                    disableDoubleClickZoom: true,
+                                    streetViewControl: false,
+                                    mapTypeControl: false,
+                                    styles: [
+                                        {
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#1b281e"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#f9fbff"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "elementType": "labels.text.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#081116"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "administrative.country",
+                                            "elementType": "geometry.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#6f5166"
+                                                },
+                                                {
+                                                    "weight": 1
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "administrative.province",
+                                            "elementType": "geometry.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#4b6878"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "landscape.man_made",
+                                            "elementType": "geometry.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#334e87"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "landscape.natural",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#3c1a34"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "poi",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#283d6a"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "poi",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#6f9ba5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "poi",
+                                            "elementType": "labels.text.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#1d2c4d"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "poi.park",
+                                            "elementType": "geometry.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#023e58"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "poi.park",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#3C7680"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road",
+                                            "stylers": [
+                                                {
+                                                    "visibility": "off"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#304a7d"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#98a5be"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road",
+                                            "elementType": "labels.text.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#1d2c4d"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road.highway",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#2c6675"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road.highway",
+                                            "elementType": "geometry.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#255763"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road.highway",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#b0d5ce"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road.highway",
+                                            "elementType": "labels.text.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#023e58"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "transit",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#98a5be"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "transit",
+                                            "elementType": "labels.text.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#1d2c4d"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "transit.line",
+                                            "elementType": "geometry.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#283d6a"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "transit.station",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#3a4762"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "water",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#060208"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "water",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#917c90"
+                                                }
+                                            ]
+                                        }
+                                    ]
+
+                                });
+                                var marker1 = new google.maps.Marker({
+                                    position: home,
+                                    map: map
+                                });
+                                var marker2 = new google.maps.Marker({
+                                    position: born,
+                                    map: map
+                                });
+                                var marker3 = new google.maps.Marker({
+                                    position: bachelors,
+                                    map: map
+                                });
+                                var marker4 = new google.maps.Marker({
+                                    position: highschool,
+                                    map: map
+                                });
+                                var marker5 = new google.maps.Marker({
+                                    position: summer,
+                                    map: map
+                                });
+
+                            }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8FB_zWzEsDltuKpH4i5LWGleZDk_wQrE&callback=initMap"
+                                async defer></script>
                     </div>
                 </div>
 
-                <!-- INSTA BLOCK -->
+                <!-- GITHUB BLOCK -->
                 <div class="col-sm-3 col-lg-3">
+
                     <div class="dash-unit">
                         <dtitle id="bloc1">My Photo Collection  </dtitle>                       <div id="bloc2" class="title-icon">
                         <i class="fa fa-camera-retro" aria-hidden="true"></i>
@@ -109,18 +396,6 @@
                                 </ul>
                             </div>
                         </section>
-                    </div>
-                </div>
-
-                <!-- GITHUB BLOCK -->
-                <div class="col-sm-3 col-lg-3">
-
-                    <div class="dash-unit">
-                        <dtitle id="bloc1">GitHub</dtitle><div id="bloc2" class="title-icon">
-                        <i aria-hidden="true" class="fa fa-github-alt align-middle"></i>
-                        </div> 
-                        <hr>  
-
                     </div>
 
                 </div>
@@ -158,16 +433,14 @@
 
                 </div>
 
-                <!-- NO CLUE WHAT THIS IS YET BLOCK -->     
+                <!-- NO CLUE WHAT THIS IS YET BLOCK -->  
+                <!-- INSTA BLOCK -->
                 <div class="col-sm-4 col-lg-4">
                     <div class="dash-unit-long">
-                        <dtitle>Somethin</dtitle>
-                        <hr>
-                        <div class="info-user"><i class="fa fa-commenting" aria-hidden="true"></i></div>
-
-                        <div class="text">
-                            <p><b>Text: </b> Wow, text. </p>
-                        </div>
+                        <dtitle id="bloc1">GitHub</dtitle><div id="bloc2" class="title-icon">
+                        <i aria-hidden="true" class="fa fa-github-alt align-middle"></i>
+                        </div> 
+                        <hr>  
                     </div>
                 </div>
             </div><!-- /row -->
@@ -191,14 +464,9 @@
 
         <!-- for faster page load ... place here -->
 
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="https://use.fontawesome.com/4d68babdee.js"></script>
-        <script src="http://maps.google.com/maps/AIzaSyAQLbMgQSpi9g_wO-Nss6qsZ202JRJEO6Q/js?sensor=false"></script>
-
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-        <script src="js/jquery.flexslider.js" type="text/javascript"></script>
         <!-- jQuery -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
         <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
 
         <!-- FlexSlider -->
@@ -217,5 +485,10 @@
                 });
             });
         </script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://use.fontawesome.com/4d68babdee.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script src="js/jquery.flexslider.js" type="text/javascript"></script>
 
     </body></html>
