@@ -9,7 +9,9 @@ $('.toggle').click(function (event) {
         duration: 500,
         easing: 'linear'
     };
-
+    
+    $( "div.indexTitle" ).replaceWith( "<div class =indexTitle>Welcome :)</div>" );
+    
     $('.profile').animate({
         right: '100px'}, options).animate({
         left:'150%'}, options).fadeOut(500, function(){

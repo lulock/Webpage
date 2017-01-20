@@ -25,7 +25,9 @@
 
     <!-- Google Fonts call. Font Used Open Sans & Raleway -->
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Robo|Noto+Sans|Josefin+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Overpass|Indie+Flower|Muli|Permanent+Marker|Lato|Open+Sans" rel="stylesheet">
+
     <style>
         /* Always set the map height explicitly to define the size of the div
         * element that contains the map. */
@@ -46,7 +48,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-star-empty"></span> Lulock's World</a>
+                    <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-flash"></span> Lulock's World</a>
                 </div> 
                 <div class="navbar-collapse collapse">
 
@@ -341,30 +343,49 @@
                                         ]
 
                                     });
-                                    var image = {url: './img/arrow.png'};
-                                    var contentString1 = '<div id="content">'+
-                                        '<div id="siteNotice">'+
-                                        '</div>'+
-                                        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-                                        '<div id="bodyContent">'+
-                                        '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-                                        'sandstone rock formation in the southern part of the '+
-                                        'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-                                        'south west of the nearest large town, Alice Springs; 450&#160;km '+
-                                        '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-                                        'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-                                        'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-                                        'Aboriginal people of the area. It has many springs, waterholes, '+
-                                        'rock caves and ancient paintings. Uluru is listed as a World '+
-                                        'Heritage Site.</p>'+
-                                        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-                                        'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-                                        '(last visited June 22, 2009).</p>'+
-                                        '</div>'+
+
+                                    // variable to define the content of Info Window
+                                    var content1 = '<div id="iw_container">' +
+                                        '<div class="iw_content">I am originally from Libya.</div>' +
+                                        '</div>';
+                                    
+                                    var content2 = '<div id="iw_container">' +
+                                        '<div class="iw_content">I was born in Västerås, Sweden.</div>' +
+                                        '</div>';
+                                    
+                                    var content3 = '<div id="iw_container">' +
+                                        '<div class="iw_content">I received my BSc. in Computer Science at the University of British Columbia in gorgeous Vancouver.</div>' +
+                                        '</div>';
+                                    
+                                    var content4 = '<div id="iw_container">' +
+                                        '<div class="iw_content">I grew up and attended highschool in Dubai, UAE.</div>' +
+                                        '</div>';
+                                    
+                                    var content5 = '<div id="iw_container">' +
+                                        '<div class="iw_content">I spent many summer/winter holidays in Vienna, Austria.</div>' +
                                         '</div>';
 
+                                    // creates the new Info Window with reference to the variable infowindow and establishes the content
                                     var infowindow1 = new google.maps.InfoWindow({
-                                        content: contentString1
+                                        content: content1,
+                                        maxWidth: 200 
+                                    });
+                                    
+                                    var infowindow2 = new google.maps.InfoWindow({
+                                        content: content2,
+                                        maxWidth: 200 
+                                    });
+                                    var infowindow3 = new google.maps.InfoWindow({
+                                        content: content3,
+                                        maxWidth: 200 
+                                    });
+                                    var infowindow4 = new google.maps.InfoWindow({
+                                        content: content4,
+                                        maxWidth: 200 
+                                    });
+                                    var infowindow5 = new google.maps.InfoWindow({
+                                        content: content5,
+                                        maxWidth: 200 
                                     });
 
                                     var marker1 = new google.maps.Marker({
@@ -390,6 +411,31 @@
                                     marker1.addListener('click', function() {
                                         infowindow1.open(map, marker1);
                                     });
+                                    
+                                    marker2.addListener('click', function() {
+                                        infowindow2.open(map, marker2);
+                                    });
+                                    
+                                    marker3.addListener('click', function() {
+                                        infowindow3.open(map, marker3);
+                                    });
+                                    
+                                    marker4.addListener('click', function() {
+                                        infowindow4.open(map, marker4);
+                                    });
+                                    
+                                    marker5.addListener('click', function() {
+                                        infowindow5.open(map, marker5);
+                                    });
+
+                                    // event to close the infoWindow with a click on the map
+                                    google.maps.event.addListener(map, 'click', function() {
+                                        infowindow1.close();
+                                        infowindow2.close();
+                                        infowindow3.close();
+                                        infowindow4.close();
+                                        infowindow5.close();
+                                    });
 
                                 }
                             </script>
@@ -408,7 +454,7 @@
                         </div>
                         <hr>
                         <div>
-                            <p class="text">Check out my photos on <a href="http://www.instagram.com/lulockscollection" target="_blank"><b>Instagram</b></a>!</p>
+                            <p class="text">Check out my photos on <a href="http://www.instagram.com/lulockscollection" target="_blank">Instagram</a>!</p>
                         </div>
                         <section class="slider insta">
                             <div class="flexslider">
@@ -447,7 +493,7 @@
                             <!-- ROW ONE within dash --> 
                             <div class="row">
                                 <div class="col-sm-8 col-lg-12">
-                                    <p class="text">I love all things animation and CG, so I thought it was about time I took the art up as hobby myself. Here are a few of my first renders! This gallery will surely grow, and I hope to find a better home for these pieces as time goes on.</p>
+                                    <p class="text">I love all things animation and CG, so I thought it was about time I took the art up as a hobby. Here are a few of my first renders using the free software <a href="https://www.blender.org/">Blender</a>. This gallery will surely grow, and I hope to find a better home for these pieces as time goes on. My main guide is the incredible <a href="https://www.blenderguru.com/">Blender Guru</a>!</p>
                                 </div>
                             </div> <!-- /row -->
 
@@ -527,8 +573,9 @@
                         <dtitle id="bloc1">Spotify Tunes</dtitle><div id="bloc2" class="title-icon">
                         <i aria-hidden="true" class="fa fa-spotify align-middle"></i>
                         </div> 
-                        <hr>  
-                        <div class="container"><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aleilamethnani%3Aplaylist%3A02mIw410itv42S3cKkxM0A" width="330" height="360" frameborder="0" allowtransparency="true"></iframe></div>
+                        <hr> 
+                        <p class="text">Music should be celebrated and shared, so here is a playlist for you.</p>
+                        <div class="container"><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aleilamethnani%3Aplaylist%3A02mIw410itv42S3cKkxM0A" width="330" height="300" frameborder="0" allowtransparency="true"></iframe></div>
                     </div>
                 </div>
             </div><!-- /row -->
