@@ -70,9 +70,8 @@
                         <h1>Leila Methnani</h1>
                         <h3>Earth, The Milky Way</h3>
                         <div class="info-user">
-
-                            <a href="mailto:leilamethnani@gmail.com" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
-                            <a href="https://www.github.com/lulock" target="_blank"><i aria-hidden="true" class="fa fa-github-alt align-middle"></i></a>
+                            <a href="mailto:leilamethnani@gmail.com" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                            <a href="https://www.github.com/lulock" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -408,8 +407,8 @@
                         <i class="fa fa-camera-retro" aria-hidden="true"></i>
                         </div>
                         <hr>
-                        <div class="text">
-                            <p>Check out my collection on <a href="http://www.instagram.com/lulockscollection" target="_blank"><b>Instagram</b></a>!</p>
+                        <div>
+                            <p class="text">Check out my photos on <a href="http://www.instagram.com/lulockscollection" target="_blank"><b>Instagram</b></a>!</p>
                         </div>
                         <section class="slider insta">
                             <div class="flexslider">
@@ -437,59 +436,102 @@
                 <div class="col-sm-8 col-lg-8">
 
                     <!-- Blender -->     
-                    <div class="dash-unit-long" style="overflow-y:scroll;">
+                    <div class="dash-unit-long">
 
                         <dtitle id="bloc1">Blender</dtitle> <div id="bloc2" class="title-icon"><i class="fa fa-paint-brush" aria-hidden="true"></i>
                         </div>
                         <hr>
 
-                        <div class="container blender">
+                        <div class="container">
 
+                            <!-- ROW ONE within dash --> 
                             <div class="row">
-
-                                <div class="col-lg-12">
+                                <div class="col-sm-8 col-lg-12">
                                     <p class="text">I love all things animation and CG, so I thought it was about time I took the art up as hobby myself. Here are a few of my first renders! This gallery will surely grow, and I hope to find a better home for these pieces as time goes on.</p>
                                 </div>
+                            </div> <!-- /row -->
 
-                                <div class="col-lg-4 col-md-6 col-xs-8 thumb">
-                                    <a class="thumbnail" href="#">
-                                        <img class="img-responsive" src="./img/donuts.png" alt="">
+                            <!-- ROW TWO within dash--> 
+                            <div class="row nested-row">
+                                <div class="col-md-3">
+                                    <div class="thumbnail-gallery">
+                                        <a href="#">
+                                            <img src="./img/donuts.png" alt="" onclick="openModal('img1')" id="img1" class="myImg">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href="#">
+                                        <div class="thumbnail-gallery">
+                                            <img src="./img/furball2.png" alt="" onclick="openModal('img2')" id="img2" class="myImg">
+                                        </div>
                                     </a>
                                 </div>
 
-                                <div class="col-lg-4 col-md-6 col-xs-8 thumb">
-
-                                    <a class="thumbnail" href="#">
-                                        <img class="img-responsive" src="./img/furball.png" alt="">
-                                    </a>
+                                <div class="col-md-3">
+                                    <div class="thumbnail-gallery">
+                                        <img class="portrait myImg" src="./img/towel.png" onclick="openModal('img3')" id="img3">
+                                    </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-6 col-xs-8 thumb">
-                                    <a class="thumbnail" href="#">
-                                        <img class="img-responsive" src="./img/towel.png" alt="">
-                                    </a>
+                                <div class="col-md-3">
+                                    <div class="thumbnail-gallery">
+                                        <img src="./img/metal.png" alt="" onclick="openModal('img4')" id="img4" class="myImg">
+                                    </div>
                                 </div>
 
+                            </div> <!-- /row -->
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal" onclick="document.getElementById('myModal').style.display='none'">
+
+                                <!-- Modal Content -->
+                                <img class="modal-content" id="img01">
+
+                                <!-- Modal Caption -->
+                                <div id="caption"></div>
                             </div>
-                        </div>
 
+                            <!--- The JavaScript -->
+                            <script>
+                                // Get the modal
+                                var modal = document.getElementById('myModal');
+                                // Get the image and insert it inside the modal - use its "alt" text as a caption
+
+                                function openModal(idx) {
+                                    var img = document.getElementById(idx);
+                                    var modalImg = document.getElementById("img01");
+
+                                    modal.style.display = "block";
+                                    modalImg.src = img.src;
+                                }
+
+                                // Get the <span> element that closes the modal
+                                var span = document.getElementById("close")[0];
+
+                                // When the user clicks on <span> (x), close the modal
+                                span.onclick = function() { 
+                                    modal.style.display = "none";
+                                }
+                            </script>
+
+
+                        </div>
                     </div>
 
                 </div>
 
-                <!-- NO CLUE WHAT THIS IS YET BLOCK -->  
-                <!-- INSTA BLOCK -->
+                <!-- SPOTIFY BLOCK -->
                 <div class="col-sm-4 col-lg-4">
                     <div class="dash-unit-long">
                         <dtitle id="bloc1">Spotify Tunes</dtitle><div id="bloc2" class="title-icon">
                         <i aria-hidden="true" class="fa fa-spotify align-middle"></i>
                         </div> 
                         <hr>  
-                        <div class="container"><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aleilamethnani%3Aplaylist%3A02mIw410itv42S3cKkxM0A" width="330" height="440" frameborder="0" allowtransparency="true"></iframe></div>
+                        <div class="container"><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aleilamethnani%3Aplaylist%3A02mIw410itv42S3cKkxM0A" width="330" height="360" frameborder="0" allowtransparency="true"></iframe></div>
                     </div>
                 </div>
             </div><!-- /row -->
-
 
         </div> <!-- /container -->
         <div id="footerwrap">

@@ -45,6 +45,7 @@ h5 {
 {
     margin: 0 0 20px;
 }
+
 /*--- Dash Unit---*/
 .dash-unit {
     margin-bottom: 30px;
@@ -142,6 +143,100 @@ h5 {
     vertical-align:middle;
 }
 
+.nested-row {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(1, 1, 1, 0.3);
+}
+
+/*****/
+/* Style the Image Used to Trigger the Modal */
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+/****/
 
 /**********Half-Unit**********/   
 .half-unit {		
@@ -213,7 +308,7 @@ h5 {
     border: 1px solid #383737;
     background-color: rgba(88, 24, 69, 0.3);
     color:white;
-    height:500px;
+    height:420px;
 }
 
 .dash-unit-long:hover {
@@ -321,13 +416,33 @@ h5 {
 
 .thumbnail {
     border:0px;
-    text-align:center;
     -webkit-box-shadow: 0px;
     -moz-box-shadow: 0px;
     box-shadow: 0px;
     background: none;
     text-align: center;      
+    overflow: hidden; /* hide the cropped portion */
+}
 
+.thumbnail-gallery { 
+    position: relative;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+}
+.thumbnail-gallery img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.thumbnail-gallery img.portrait {
+    width: 100%;
+    height: auto;
 }
 
 .navbar-nav  {
@@ -373,26 +488,17 @@ a {
     text-decoration: none;
 }
 
+
+a:visited { 
+    color: #b2c831;
+    text-decoration: none;
+}
+
 a:hover {
     color: #dff948;
     text-decoration: none;
-}
+    cursor:pointer
 
-a:visited { 
-    color: #dff948;
-    text-decoration: none;
-}
-
-.thumb {
-    display: inline-block;
-    margin:  .5em;
-    padding:  0; 
-    width:98%;
-}
-
-.img-responsive{
-    margin: 10px;
-    border: 2px solid #232323;
 }
 
 
