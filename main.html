@@ -64,22 +64,22 @@
                 <!-- MY BLOCK -->
                 <div class="col-sm-3 col-lg-3">
                     <a href="#" class="more">
-                    <div class="dash-unit">
-                        <div id="profile-dash"></div>
-                        <dtitle id="bloc1">About Me</dtitle>
-                        <i id="bloc2" class="fa fa-info" aria-hidden="true"></i>
-                        <hr>
-                        
-                        <div class="thumbnail">
-                            <img src="img/icons/profile.jpg" width="120" height="120" alt="Leila Methnani" class="img-circle" style="border: 2px solid white" onmouseover="this.src='img/icons/crazy.jpg';" onmouseout="this.src='img/icons/profile.jpg';">
-                        </div><!-- /thumbnail -->
-                        <h1>Leila Methnani</h1>
-                        <h3>Earth, The Milky Way</h3>
-                        <div class="info-user">
-                            <a href="mailto:leilamethnani@gmail.com" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                            <a href="https://www.github.com/lulock" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        <div class="dash-unit">
+                            <div id="profile-dash"></div>
+                            <dtitle id="bloc1">About Me</dtitle>
+                            <i id="bloc2" class="fa fa-info" aria-hidden="true"></i>
+                            <hr>
+
+                            <div class="thumbnail">
+                                <img src="img/icons/profile.jpg" width="120" height="120" alt="Leila Methnani" class="img-circle" style="border: 2px solid white" onmouseover="this.src='img/icons/crazy.jpg';" onmouseout="this.src='img/icons/profile.jpg';">
+                            </div><!-- /thumbnail -->
+                            <h1>Leila Methnani</h1>
+                            <h3>Earth, The Milky Way</h3>
+                            <div class="info-user">
+                                <a href="mailto:leilamethnani@gmail.com" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                <a href="https://www.github.com/lulock" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            </div>
                         </div>
-                    </div>
                     </a>
                 </div>
 
@@ -353,19 +353,19 @@
                                     var content1 = '<div id="iw_container">' +
                                         '<div class="iw_content">I am originally from Libya.</div>' +
                                         '</div>';
-                                    
+
                                     var content2 = '<div id="iw_container">' +
                                         '<div class="iw_content">I was born in Västerås, Sweden.</div>' +
                                         '</div>';
-                                    
+
                                     var content3 = '<div id="iw_container">' +
                                         '<div class="iw_content">I received my BSc. in Computer Science at the University of British Columbia in gorgeous Vancouver.</div>' +
                                         '</div>';
-                                    
+
                                     var content4 = '<div id="iw_container">' +
                                         '<div class="iw_content">I grew up and attended highschool in Dubai, UAE.</div>' +
                                         '</div>';
-                                    
+
                                     var content5 = '<div id="iw_container">' +
                                         '<div class="iw_content">I spent many summer/winter holidays in Vienna, Austria.</div>' +
                                         '</div>';
@@ -375,7 +375,7 @@
                                         content: content1,
                                         maxWidth: 200 
                                     });
-                                    
+
                                     var infowindow2 = new google.maps.InfoWindow({
                                         content: content2,
                                         maxWidth: 200 
@@ -416,19 +416,19 @@
                                     marker1.addListener('click', function() {
                                         infowindow1.open(map, marker1);
                                     });
-                                    
+
                                     marker2.addListener('click', function() {
                                         infowindow2.open(map, marker2);
                                     });
-                                    
+
                                     marker3.addListener('click', function() {
                                         infowindow3.open(map, marker3);
                                     });
-                                    
+
                                     marker4.addListener('click', function() {
                                         infowindow4.open(map, marker4);
                                     });
-                                    
+
                                     marker5.addListener('click', function() {
                                         infowindow5.open(map, marker5);
                                     });
@@ -507,7 +507,7 @@
                                 <div class="col-md-3">
                                     <div class="thumbnail-gallery">
                                         <a href="#">
-                                            <img src="./img/donuts.png" alt="" onclick="openModal('img1')" id="img1" class="myImg">
+                                            <img src="./img/donuts.png" alt="" onclick="openModal('1')" id="1" class="myImg">
                                         </a>
                                     </div>
                                 </div>
@@ -515,46 +515,79 @@
                                 <div class="col-md-3">
                                     <a href="#">
                                         <div class="thumbnail-gallery">
-                                            <img src="./img/furball2.png" alt="" onclick="openModal('img2')" id="img2" class="myImg">
+                                            <img src="./img/furball2.png" alt="" onclick="openModal('2')" id="2" class="myImg">
                                         </div>
                                     </a>
                                 </div>
 
                                 <div class="col-md-3">
                                     <div class="thumbnail-gallery">
-                                        <img class="portrait myImg" src="./img/towel.png" onclick="openModal('img3')" id="img3">
+                                        <img class="portrait myImg" src="./img/towel.png" onclick="openModal('3')" id="3">
                                     </div>
                                 </div>
 
                                 <div class="col-md-3">
                                     <div class="thumbnail-gallery">
-                                        <img src="./img/metal.png" alt="" onclick="openModal('img4')" id="img4" class="myImg">
+                                        <img src="./img/metal.png" alt="" onclick="openModal('4')" id="4" class="myImg">
                                     </div>
                                 </div>
 
                             </div> <!-- /row -->
                             <!-- The Modal -->
-                            <div id="myModal" class="modal" onclick="document.getElementById('myModal').style.display='none'">
+                            <div id="myModal" class="modal">
 
                                 <!-- Modal Content -->
-                                <img class="modal-content" id="img01">
+
+                                <div class="modal-body"> 
+                                    <div class="row text-center">
+                                        <img class="modal-content" id="img01" onclick="hide()">
+                                        <a id="navPrev" href="#" onclick="prev()"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                        </a>
+                                        <a id="navNext" href="#" onclick="next()"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
 
                                 <!-- Modal Caption -->
-                                <div id="caption"></div>
                             </div>
 
                             <!--- The JavaScript -->
                             <script>
                                 // Get the modal
                                 var modal = document.getElementById('myModal');
+                                var data = document.getElementsByClassName("myImg");
+                                var current = data.length;
+
                                 // Get the image and insert it inside the modal - use its "alt" text as a caption
 
+                                function prev() {
+                                    if (current > 1) {
+                                        current--;
+                                    }
+                                    openModal(current);
+
+                                }
+
+                                function next() {
+                                    if (current < data.length) {
+                                        current++;
+                                    }
+                                    openModal(current);
+                                }
                                 function openModal(idx) {
+                                    current = parseInt(idx);
+                                    $("body").addClass("modal-open");
+
                                     var img = document.getElementById(idx);
                                     var modalImg = document.getElementById("img01");
 
                                     modal.style.display = "block";
                                     modalImg.src = img.src;
+                                }
+
+                                function hide(){
+                                    document.getElementById('myModal').style.display='none';
+                                    $("body").removeClass("modal-open");
                                 }
 
                             </script>
@@ -585,7 +618,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-12">
                         <p><span class="li_heart"></span> luv u </p>                        
-                        <p><grey>Last Update: January 20th, 2017.</grey></p>
+                        <p><grey>Last Update: January 22nd, 2017.</grey></p>
                     </div>
                 </div><!-- /row -->
             </div><!-- /container -->		
@@ -605,7 +638,7 @@
         <script defer src="js/jquery.flexslider.js"></script>
 
         <script type="text/javascript">
-        
+
             $(window).load(function(){
                 $('.flexslider').flexslider({
                     animation: "slide",

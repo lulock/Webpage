@@ -57,7 +57,6 @@ h5 {
     text-align:center;
 }
 
-
 /***********BLOCKS & WRAPS***********/
 
 #bloc1, #bloc2
@@ -67,6 +66,17 @@ h5 {
 #map
 {
     margin: 0 0 20px;
+}
+
+#navNext{
+    font-size: 30px;
+    padding-left: 20px;
+
+}
+#navPrev{
+    font-size: 30px;
+    padding-right: 20px;
+
 }
 
 /*--- Dash Unit---*/
@@ -168,7 +178,7 @@ h5 {
 }
 
 .dash-unit a {
-text-decoration: none;
+    text-decoration: none;
 }
 
 
@@ -207,8 +217,12 @@ text-decoration: none;
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    height: 80%;
+    max-height: 525px;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -469,6 +483,10 @@ a:hover {
     text-decoration: none;
     cursor:pointer
 
+}
+
+.row a{
+    text-decoration: none;
 }
 
 
