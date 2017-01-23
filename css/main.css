@@ -47,7 +47,7 @@ h5 {
 #overlay {
     position:absolute;
     width:inherit;
-    height:inherit;
+    height:300px;
     top:0;
     left:0;
     padding: 30px 30px 20px;
