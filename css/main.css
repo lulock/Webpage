@@ -79,6 +79,27 @@ h5 {
 
 }
 
+#wrapper{
+    width: 100%;
+    padding-bottom: 65%;
+}
+
+.spotify-embed {
+
+    iframe {
+        display: block;
+        transition: opacity 0.125s;
+        .js & {
+            opacity: 0;
+
+            &.loaded {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
 /*--- Dash Unit---*/
 .dash-unit {
     margin-bottom: 30px;
@@ -86,7 +107,7 @@ h5 {
     border: 1px solid #383737;
     background-color: rgba(88, 24, 69, 0.3);
     color:white;
-    height:290px;
+    height:300px;
 }
 
 .dash-unit:hover {
@@ -186,6 +207,8 @@ h5 {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: rgba(1, 1, 1, 0.3);
+    max-height:50%;
+    overflow-y:auto;
 }
 
 /*****/
@@ -289,6 +312,8 @@ body.modal-open {
     background-color: rgba(88, 24, 69, 0.3);
     color:white;
     height:420px;
+    overflow: hidden;  
+
 }
 
 .dash-unit-long:hover {
