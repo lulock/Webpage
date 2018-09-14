@@ -5,8 +5,16 @@
 *
 */
 
+/*!
+*COLOUR PALATE REF
+*
+* GREEN COLOUR #b2c831;
+* GRAY #383737;
 
-/**********BASE**********/   
+*/
+
+
+/**********BASE**********/
 body {
     background-image: linear-gradient(45deg, #4F364C, #000);
 
@@ -121,7 +129,7 @@ h5 {
     color:#ffffff;
     margin:8px;
     padding:0px;
-    height:inherit	
+    height:inherit
 }
 
 .dash-unit hr {
@@ -204,115 +212,122 @@ h5 {
 
 
 .nested-row {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: rgba(1, 1, 1, 0.3);
-    max-height:50%;
+    max-height:98%;
     overflow-y:auto;
 }
 
 /*****/
-/* Style the Image Used to Trigger the Modal */
-.myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.myImg:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
 }
 
-/* Modal Content (Image) */
+/* Modal Content */
 .modal-content {
-    margin: auto;
-    display: block;
-    height: 80%;
-    max-height: 525px;
-}
-
-body.modal-open {
-    overflow: hidden;
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption { 
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
 }
 
 /* The Close Button */
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
+/* Hide the slides by default */
+.mySlides {
+  display: none;
 }
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+
 /****/
 
 /*--- Dash Unit Long ---*/
-.dash-unit-long {		
+.dash-unit-long {
     margin-bottom: 30px;
     padding-bottom:10px;
     border: 1px solid #383737;
     background-color: rgba(88, 24, 69, 0.3);
     color:white;
     height:420px;
-    overflow: hidden;  
+    overflow-y: scroll;
 
 }
 
@@ -327,7 +342,7 @@ body.modal-open {
     color:#ffffff;
     margin:8px;
     padding:0px;
-    height:inherit	
+    height:inherit
 }
 
 .dash-unit-long hr {
@@ -403,7 +418,7 @@ body.modal-open {
     vertical-align:middle;
 }
 
-/**********Styling Elements**********/   
+/**********Styling Elements**********/
 
 .text p {
     font-family: 'Open Sans', sans-serif;
@@ -419,6 +434,34 @@ body.modal-open {
 
 
 /***********Bootstrap Default Modifications***********/
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 33.3%;
+}
+
+.gallery {
+  background-color:rgba(1, 1, 1,0.35);
+}
+
+.gallery img {
+  padding:5px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.gallery img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 
 .thumbnail {
     border:0px;
@@ -426,30 +469,10 @@ body.modal-open {
     -moz-box-shadow: 0px;
     box-shadow: 0px;
     background: none;
-    text-align: center;      
+    text-align: center;
     overflow: hidden; /* hide the cropped portion */
 }
 
-.thumbnail-gallery { 
-    position: relative;
-    width: 160px;
-    height: 160px;
-    overflow: hidden;
-}
-.thumbnail-gallery img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 100%;
-    width: auto;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-}
-.thumbnail-gallery img.portrait {
-    width: 100%;
-    height: auto;
-}
 
 .navbar-nav  {
     background-color:rgba(140, 139, 141,0.05);
@@ -459,7 +482,6 @@ body.modal-open {
     color:floralwhite;
 }
 /***********LineIcons Styles***********/
-
 
 .info-user {
     text-align:center;
@@ -491,14 +513,14 @@ body.modal-open {
     vertical-align: text-bottom
 }
 
-/**********Link Styling**********/   
+/**********Link Styling**********/
 a {
     color: #b2c831;
     text-decoration: none;
 }
 
 
-a:visited { 
+a:visited {
     color: #b2c831;
     text-decoration: none;
 }
@@ -515,14 +537,15 @@ a:hover {
 }
 
 
-/**********FooterWrap Section**********/   
+/**********FooterWrap Section**********/
 #footerwrap {
     width: 100%;
     background: rgba(7,7,12,0.5);
     padding-top:25px;
     padding-bottom: 20px;
-    border-top-style: solid;
-
+    border-top-style: solid ;
+    border-top-width: thin;
+    border-top-color: #383737;
     text-align:center
 
 }
@@ -530,9 +553,9 @@ a:hover {
 #footerwrap p {
     color:white;
     font-size:12px;
-} 
+}
 
-/**********Media Styles**********/   
+/**********Media Styles**********/
 
 @media (max-width: 360px){
 
