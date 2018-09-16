@@ -21,6 +21,17 @@ $(function(){
 
 });
 
+
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 10) {
+	  $(".navbar-nav").css("background-color" , "rgba(7,7,12,0.75");
+	  }
+	  else{
+		   $(".navbar-nav").css("background-color" , "rgba(140, 139, 141,0.05");
+	  }
+  })
+
 $(window).on('load resize', function() {
     $('iframe[src*="embed.spotify.com"]').each( function() {
         $(this).css('width', $(this).parent().css('width'));
@@ -31,7 +42,7 @@ $(window).on('load resize', function() {
             $(this).addClass('loaded');
         });
     });
-    var width = $(window).width(); 
+    var width = $(window).width();
 
     if (width <768) {
         var height = $("#wrapper").height();

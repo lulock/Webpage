@@ -227,7 +227,7 @@ h5 {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 11;
   left: 0;
   top: 0;
   width: 100%;
@@ -476,6 +476,8 @@ h5 {
 
 .navbar-nav  {
     background-color:rgba(140, 139, 141,0.05);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand {
